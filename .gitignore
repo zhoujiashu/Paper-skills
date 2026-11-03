@@ -1,0 +1,12 @@
+# Office temp files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# OS junk
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Local outputs
+*.tmp

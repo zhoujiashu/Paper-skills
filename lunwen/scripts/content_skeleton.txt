@@ -1,0 +1,131 @@
+TITLE|[[Working title: concise, at most 15 words, naming the system, the method, and the outcome]]
+AUTH|[[Author One]][sp]1,2[/sp], [[Author Two]][sp]1[/sp], [[Author Three]][sp]2[/sp], [[Corresponding Author]][sp]1,*[/sp]
+AFF|1[[Department, Institution, City, Country]]
+AFF|2[[Department, Institution, City, Country]]
+CORR|Corresponding author: [[Name]] ([[email@institution.edu]])
+H1|Key Points:
+NOTE|GUIDE: exactly 3 bullets; each at most 100 characters; state findings and implications, not methods.
+KEY|[[Key point 1: main finding, naming the system and the outcome]]
+KEY|[[Key point 2: second finding, quantitative if possible]]
+KEY|[[Key point 3: implication or the most transferable result]]
+H1|Abstract
+NOTE|GUIDE: one paragraph, at most 250 words. Background (1-2 sentences), gap, approach, key quantitative results, implication. No citations and no undefined abbreviations.
+ABS|[[Abstract text: state the problem, the method, the principal quantitative results, and why they matter.]]
+H1|Plain Language Summary
+NOTE|GUIDE: 100-200 words, no jargon, no citations, no abbreviations. Explain why a non-specialist should care.
+PLS|[[Plain language summary: what problem, what was done, what was found, and what it means in everyday terms.]]
+H1|1 Introduction
+NOTE|GUIDE: 5-6 paragraphs. (1) broad context; (2) what is already known; (3) the specific gap; (4) two or three technical challenges; (5) what this paper does and its contributions; (6) optional roadmap. Cite primary literature, not textbooks.
+B|[[Paragraph 1: broad context and why the problem matters.]]
+B|[[Paragraph 2: review of prior approaches and their reported performance, with citations.]]
+B|[[Paragraph 3: the gap this study addresses, stated as one testable sentence.]]
+B|[[Paragraph 4: why the gap is difficult, listing the technical challenges that motivate the method.]]
+B|[[Paragraph 5: contributions of this work, each mapped to a result section.]]
+B|[[Paragraph 6: brief roadmap of the paper.]]
+H1|2 Governing Equations and Problem Formulation
+H2|2.1 Governing equations
+NOTE|GUIDE: derive rather than assert. State the conservation law, the constitutive relation, and the assumptions behind each term. Number every display equation and define every symbol immediately below it.
+B|[[Physical setting and assumptions: geometry, dimensionality, material phases, and the three or four assumptions that make the problem tractable.]]
+B|The governing equation for [[field 1]] is given by:
+EQ|(1)|[[LaTeX: governing equation for field 1]]
+W|where [[symbol]] is [[meaning]] ([[unit]]); [[symbol]] is [[meaning]] ([[unit]]); and [[symbol]] is [[meaning]] ([[unit]]).
+B|The governing equation for [[field 2]] is given by:
+EQ|(2)|[[LaTeX: governing equation for field 2]]
+W|where [[symbol]] is [[meaning]] ([[unit]]); [[symbol]] is [[meaning]] ([[unit]]); and [[symbol]] is [[meaning]] ([[unit]]).
+B|The governing equation for [[field 3]] is expressed by:
+EQ|(3)|[[LaTeX: governing equation for field 3]]
+W|where [[symbol]] is [[meaning]] ([[unit]]); [[symbol]] is [[meaning]] ([[unit]]); and [[symbol]] is [[meaning]] ([[unit]]).
+B|Substituting the constitutive relations into the balance equations and eliminating [[eliminated field]] yields the reduced system:
+EQ|(4)|[[LaTeX: reduced equation for field 1]]
+EQ|(5)|[[LaTeX: reduced equation for field 2]]
+W|where [[coefficient]] denotes [[meaning]] and [[coefficient]] denotes [[meaning]].
+H2|2.2 Material heterogeneity and case configurations
+NOTE|GUIDE: define each case in a table so that every later figure can be mapped to one row. State how properties vary with space and how contrasts are quantified.
+B|[[Description of the heterogeneity configurations and the property profiles used in this study.]]
+TCAP|Table 1. [[Problem configurations used in the forward cases.]]
+TBLH|Case##Medium type##Variable property##Profile##Reference solution
+TBLR|[[A]]##[[Homogeneous]]##[[none]]##[[constant]]##[[Analytical vs proposed]]
+TBLR|[[B1]]##[[Continuously varying]]##[[property 1]]##[[linear]]##[[Benchmark vs proposed]]
+TBLR|[[C1]]##[[Layered]]##[[property 2]]##[[low contrast]]##[[Benchmark vs proposed]]
+B|[[Explain how the cases isolate individual effects and why the selected contrasts are representative.]]
+H2|2.3 Boundary and initial conditions
+B|The problem is solved under [[mixed Dirichlet-Neumann]] boundary conditions. At the [[upper/lower]] boundary:
+EQ|(6)|[[LaTeX: boundary condition]]
+B|At the [[opposite]] boundary:
+EQ|(7)|[[LaTeX: boundary condition]]
+B|The initial state is:
+EQ|(8)|[[LaTeX: initial condition]]
+H2|2.4 Nondimensional form
+NOTE|GUIDE: list the characteristic scales, substitute them into equations (1)-(5), and collect the dimensionless groups. Use one consistent notation for the rest of the paper.
+B|The governing equations are cast into dimensionless form using the characteristic scales [[H]], [[T_ref]], [[p_0]], and [[c_0]]. Under this normalization:
+EQ|(9)|[[LaTeX: dimensionless equation 1]]
+EQ|(10)|[[LaTeX: dimensionless equation 2]]
+B|with normalized coefficients:
+EQ|(11)|[[LaTeX: dimensionless coefficient definitions]]
+H1|3 Methodology
+H2|3.1 Formulation and solution strategy
+NOTE|GUIDE: this section must be reproducible. Give the discrete or learned representation, the loss function or weak form, the treatment of boundary and initial conditions, and the coupling between fields.
+B|[[Describe the numerical, analytical, or learning-based formulation used to solve equations (9)-(11).]]
+EQ|(12)|[[LaTeX: loss function or weak form]]
+W|where [[symbol]] denotes [[meaning]], [[symbol]] denotes [[meaning]], and [[symbol]] denotes [[meaning]].
+H2|3.2 Numerical scheme and algorithmic details
+NOTE|GUIDE: report grid or network size, time step, iteration counts, tolerances, hardware, and the rationale for each choice. A reader must be able to rerun the study.
+B|[[Spatial and temporal discretization, or network architecture and training schedule.]]
+EQ|(13)|[[LaTeX: discretized equation or update rule]]
+B|[[Stability condition, CFL constraint, or convergence criterion, with the inequality and its interpretation.]]
+H2|3.3 Reference solutions and evaluation protocol
+NOTE|GUIDE: explain how correctness is established. For each benchmark, state the reference, the error metric, and the acceptance threshold.
+B|[[Reference solutions, error metrics, and the protocol used to compare methods.]]
+EQ|(14)|[[LaTeX: error metric]]
+H1|4 Results
+H2|4.1 Verification against reference solutions
+B|[[Verification results for the homogeneous or analytical benchmark. Report the error norm and the time evolution.]]
+FIG|Fig. 1. [[Caption: panels (a)-(c), what each panel shows, and the comparison being made.]]
+B|[[Quantitative interpretation of Fig. 1, including the maximum and time-averaged errors.]]
+TCAP|Table 2. [[Material and numerical parameters used in the benchmark.]]
+TBLH|Parameter##Symbol##Value##Unit
+TBLR|[[Parameter name]]##[[Symbol]]##[[Value]]##[[Unit]]
+TBLR|[[Parameter name]]##[[Symbol]]##[[Value]]##[[Unit]]
+H2|4.2 Cases with continuously varying properties
+B|[[Results for the smoothly heterogeneous cases. Compare against the benchmark and identify where the method loses accuracy.]]
+FIG|Fig. 2. [[Caption: profiles at selected times and the corresponding error curves.]]
+H2|4.3 Layered heterogeneity
+B|[[Results for the layered cases. Discuss interface continuity, contrast effects, and any failure modes.]]
+FIG|Fig. 3. [[Caption: comparison across contrast ratios and the interface treatment.]]
+H2|4.4 Summary of results
+B|[[Synthesis of Sections 4.1-4.3 in three or four findings, each tied to a figure or table.]]
+H1|5 Discussion
+H2|5.1 Interpretation and implications
+B|[[What the results mean physically, what is new relative to prior work, and where the method transfers.]]
+H2|5.2 Limitations and sensitivity
+B|[[Assumptions that limit validity, sensitivity to parameters, and the range of conditions tested.]]
+H1|6 Conclusions
+NOTE|GUIDE: four short paragraphs: what was built, what was verified, what was discovered, and what comes next. Do not introduce new results here.
+B|[[Conclusion paragraph 1: the framework and its scope.]]
+B|[[Conclusion paragraph 2: verification and forward-modeling findings.]]
+B|[[Conclusion paragraph 3: inversion or application findings.]]
+B|[[Conclusion paragraph 4: implications and future work.]]
+H1|Conflict of Interest
+B|The authors declare no conflicts of interest relevant to this study.
+H1|Availability Statement
+B|[[State where the code, data, and scripts are archived, with a persistent identifier and access conditions.]]
+H1|References
+NOTE|GUIDE: AGU author-year style; alphabetical; hanging indent; DOI when available. Keep only cited works.
+REF|[[Author, A. A., Author, B. B., & Author, C. C. (Year). Title of article. Journal Name, volume(issue), pages. https://doi.org/xxxx]]
+REF|[[Author, D. D. (Year). Title of book (2nd ed.). Publisher.]]
+REF|[[Author, E. E., & Author, F. F. (Year). Title of conference paper. In Proceedings Title (pp. xx-xx). Publisher. https://doi.org/xxxx]]
+PAGEBREAK
+H1|Appendix A. Derivation of the reduced system
+NOTE|GUIDE: this is the rigorous derivation behind equations (4)-(5). Follow the seven-step protocol: assumptions, balance laws, constitutive relations, elimination, dimensionless groups, verification, symbol table.
+H2|A.1 Original three-field system
+B|[[State the original equations and their initial and boundary conditions.]]
+EQ|(A1)|[[LaTeX: original equation 1]]
+EQ|(A2)|[[LaTeX: original equation 2]]
+EQ|(A3)|[[LaTeX: original equation 3]]
+H2|A.2 Elimination of the auxiliary field
+B|[[Integrate or substitute step by step; show every intermediate result that a reader cannot reconstruct mentally.]]
+EQ|(A4)|[[LaTeX: intermediate result]]
+EQ|(A5)|[[LaTeX: reduced system]]
+W|where [[symbol]] is [[meaning]] ([[unit]]).
+H2|A.3 Consistency check
+B|[[Recover a known limit or benchmark to show that the reduced system is consistent with the original formulation.]]
